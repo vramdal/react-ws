@@ -6,7 +6,7 @@
 
     <title>React Workshop</title>
 
-    <meta name="author" content="Kris-Mikael Krister">
+    <meta name="author" content="Vidar Ramdal">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -103,7 +103,7 @@ h2 {
             <section>
                 <img class="tiny-pulsate" src="imgs/react.svg" style="border: 0; background-color: transparent;"/>
                 <p>
-                    <small><a href="mailto:kris-mikael.krister@webstep.no">kris-mikael.krister@webstep.no</a></small>
+                    <small><a href="mailto:vidar.ramdal@webstep.no">vidar.ramdal@webstep.no</a></small>
                 </p>
                 <aside class="notes">
                     Hei og velkommen til den første av to React-workshops.
@@ -397,7 +397,7 @@ ReactDOM.render(...);
 
                 <pre>
                     <code class="language-jsx">
-React.createElement(MyOwnHeaderComponent, {yourName: "Kris-Mikael"});
+React.createElement(MyOwnHeaderComponent, {yourName: "Vidar"});
                     </code>
                 </pre>
 
@@ -578,7 +578,7 @@ class Header extends React.Component {
 }
 
 ReactDOM.render(
-    &lt;Header yourName="Kris-Mikael"/&gt;,
+    &lt;Header yourName="Vidar"/&gt;,
     document.getElementById('my-app')
 );
                     </code>
@@ -655,7 +655,7 @@ ReactDOM.render(
 
                 <aside class="notes">
                     <ul>
-                        <li>Forklar node</li>
+                        <li>Forklar node - javascript-motoren til Chrome som er skilt ut som eget, kjørbart produkt</li>
                     </ul>
                 </aside>
 
@@ -669,7 +669,7 @@ ReactDOM.render(
 
                 <aside class="notes">
                     <ul>
-                        <li>Forklar npm</li>
+                        <li>Forklar npm - pakkemanager for Node-moduler</li>
                     </ul>
                 </aside>
 
@@ -749,6 +749,11 @@ class Header extends React.Component {
                             http://courses.reactjsprogram.com/courses/reactjsfundamentals
                         </a>
                     </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                            https://developer.mozilla.org/en-US/docs/Web/JavaScript
+                        </a>
+                    </li>
                 </ul>
 
             </section>
@@ -756,7 +761,7 @@ class Header extends React.Component {
             <section>
                 <img class="tiny-pulsate" src="imgs/react.svg" style="border: 0; background-color: transparent;"/>
                 <p>
-                    <small><a href="mailto:kris-mikael.krister@webstep.no">kris-mikael.krister@webstep.no</a></small>
+                    <small><a href="mailto:vidar.ramdal@webstep.no">vidar.ramdal@webstep.no</a></small>
                 </p>
                 <aside class="notes">
                     Hei og velkommen til den andre og siste, for denne gang, React-workshops.
@@ -1301,6 +1306,9 @@ npm install
                     <li class="fragment fade-up">Lagerstatus oppdateres</li>
                     <li class="fragment fade-up">Handlekurv-ikon må egentlig oppdateres - bug!</li>
                 </ul>
+                <aside class="notes">
+                    <li>Hvilken komponent styrer hvem?</li>
+                </aside>
             </section>
 
             <!--
@@ -1352,7 +1360,7 @@ npm install
                 <h2>Motivasjon for Redux</h2>
 
                 <ul>
-                    <li>Deterministisk render av views</li>
+                    <li>Deterministisk rendering av views</li>
                     <li>Sentralisert kontroll over state</li>
                     <li>Forenkle asynkrone hendelser</li>
                     <li>Mindre boilerplate</li>
@@ -1365,6 +1373,13 @@ npm install
                         <li>Færre bugs</li>
                     </ul>
                 </aside>
+            </section>
+
+            <section>
+                <h2>Deterministisk rendering av views</h2>
+                <p style="font-style: italic; font-size: 200%">
+                    view = <span style="font-size: larger">⨍</span>(state)
+                </p>
             </section>
 
             <section>
@@ -1397,6 +1412,16 @@ npm install
                         <li>todo: Her må forklaring av pure functions inn</li>
                     </ul>
                 </aside>
+            </section>
+
+            <section>
+                <h2>Redux-modellen</h2>
+                <p>
+                <div style="width: 1024px; height: 400px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/c3ae3b2d-1b86-48df-9848-698787abefe4" id="MVusj__P-YBG"></iframe></div>
+                <br/>
+                <a href="https://www.lucidchart.com/documents/view/c3ae3b2d-1b86-48df-9848-698787abefe4" target="_blank">Popout</a> -
+                <a href="https://www.lucidchart.com/documents/edit/c3ae3b2d-1b86-48df-9848-698787abefe4#">Rediger</a>
+                </p>
             </section>
 
 <!--
@@ -1519,6 +1544,7 @@ function movieReducer(state = initialState, action) {
                 <aside class="notes">
                     <ul>
                         <li>Noe om pure functions!</li>
+                        <li>Immutability! Altså må arrays og objekter lages nye</li>
                     </ul>
                 </aside>
             </section>

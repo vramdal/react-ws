@@ -1,0 +1,7 @@
+npm / package.json
+
+ES6-syntaks
+
+SCSS
+
+Google Chrome-verktøyene

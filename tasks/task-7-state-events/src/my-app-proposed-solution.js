@@ -51,7 +51,7 @@ class MovieList extends React.Component {
 
 ReactDOM.render(
     <div>
-        <Header yourName="Kris-Mikael" />
+        <Header yourName="Vidar" />
         <MovieList/>
     </div>,
     document.getElementById('my-app')
