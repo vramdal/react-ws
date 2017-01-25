@@ -326,6 +326,7 @@ ReactDOM.render(myElement, document.getElementById('my-dom-id'));
                 </pre>
                 <aside class="notes">
                     <ul>
+                        <li>Tar parametere: et ReactElement, og en DOM-node</li>
                     </ul>
                 </aside>
             </section>
@@ -339,15 +340,24 @@ ReactDOM.render(myElement, document.getElementById('my-dom-id'));
                 <p class="hints">Hint/forslag:</p>
 
                 <ul>
-                    <li>Ta utgangspunkt i <code>tasks/task-1/index.html</code> fra repoet <a href="https://github.com/kmkr/react-ws">https://github.com/kmkr/react-ws</a></li>
+                    <li>Ta utgangspunkt i <code>tasks/task-1/index.html</code> fra repoet <a href="https://github.com/vramdal/react-ws">https://github.com/vramdal/react-ws</a></li>
                     <li>Åpne `tasks/task-1/index.html` i en nettleser for å se resultatet</li>
                     <li>Dersom du vil se eksempler fra presentasjonen, åpne `open-presentation.html` i en nettleser</li>
+                    <li>Dokumentasjon:
+                        <ul>
+                            <li><a href="https://facebook.github.io/react/docs/react-api.html#createelement">React.createElement</a></li>
+                            <li><a href="https://facebook.github.io/react/docs/react-dom.html#render">ReactDOM.render</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <pre>
                     <code class="language-jsx">
 React.createElement("div", null, "Hei på deg!")
                     </code>
                 </pre>
+                <aside class="notes">
+                    Først individuelt, så felles gjennomgang på prosjektor
+                </aside>
             </section>
 
             <section>
@@ -368,7 +378,7 @@ ReactDOM.render(...);
                 </pre>
                 <aside class="notes">
                     <ul>
-                        <li>createClass gir en funksjon</li>
+                        <li>createClass gir en funksjon. Vi ser at createElement også kan ta en klasse som parameter. I stad var det en streng som angai element-navn ("div")</li>
                     </ul>
                 </aside>
             </section>
@@ -478,6 +488,14 @@ var myElem = React.createElement(
 ReactDOM.render(myElem, ...)
                     </code>
                 </pre>
+                <aside class="notes">
+                    Ref. dokumentasjon: React.createElement(
+                    type,
+                    [props],
+                    [...children]
+                    )
+                    https://facebook.github.io/react/docs/react-api.html#createelement
+                </aside>
             </section>
 
             <section>
@@ -512,6 +530,9 @@ React.createClass({
     }
 });
                     </code>
+                    <ul>
+                        <li>Dokumentasjon: <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></li>
+                    </ul>
                 </pre>
                 <aside class="notes">
                     <ul>
@@ -682,7 +703,7 @@ ReactDOM.render(
                 <ol>
                     <li>Installer node</li>
                     <li>Kjør <code>npm init</code></li>
-                    <li>Installer babel med <code>npm install --save-dev</code></li>
+                    <li>Installer babel med <code>npm install babel --save-dev</code></li>
                     <li>Et par linjer i <code>.babelrc</code></li>
                 </ol>
 
@@ -720,6 +741,10 @@ class Header extends React.Component {
 }
                     </code>
                 </pre>
+
+                <aside class="notes">
+                    Vis package.json, og build-kommandoen der
+                </aside>
 
             </section>
 
@@ -1883,6 +1908,19 @@ npm run watch
                     <li><a href="https://rainsoft.io/gentle-explanation-of-this-in-javascript/">https://rainsoft.io/gentle-explanation-of-this-in-javascript/</a></li>
                 </ul>
 
+            </section>
+
+            <section>
+                <h2>React Component Lifecycle</h2>
+                <ul>
+                    <li><a href="https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle">https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle</a></li>
+                </ul>
+
+                <aside class="notes">
+                    Hvis tid
+
+                    legg merke til at noen metoder kalles/ikke kalles "on initial render"
+                </aside>
             </section>
 
         </div>
