@@ -1,6 +1,11 @@
 npm / package.json
 
 ES6-syntaks
+ - default parameterverdi
+ - () => {}
+ - spread
+ - Object.assign  Object.assign(state, { visibilityFilter: action.filter }) is also wrong: it will mutate the first argument. You must supply an empty object as the first parameter.
+ - let
 
 SCSS
 
@@ -11,3 +16,7 @@ Google Chrome-verktøyene
 React komponent-livssyklus
 
 Installere dependencies med npm
+
+De forskjellige måtene en komponent kan få input på (props, omponent-state, redux-state, interne veriabler, context)
+
+Reducere skal bare returnere nye objekter når de er endra. Implikasjoner. Equals-sjekk.
